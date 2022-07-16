@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+  <link href="./main.css" rel="stylesheet">
+</head>
+
+<body>
+  <div
+      id="todrag"
+      ondrop="console.log(event.dataTransfer.getData('text/plain'))"
+      ondragenter="return false;"
+      ondragover="return false;"
+      class="experience">
+    drop on me !
+  </div>
+  <div
+      id="todrag"
+      draggable="true"
+      ondragstart="
+      event.dataTransfer.setData('text/plain', 'mega payload');
+      event.dataTransfer.effectAllowed='link'"
+      ondragend="console.log(event)"
+      class="experience">
+    drag me !
+  </div>
+</body>
+
